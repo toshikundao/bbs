@@ -53,20 +53,26 @@ $db = null;
   <title>掲示板</title>
 </head>
 
-<body class="w-75 m-auto">
-  <h1 class="text-center">掲示板</h1>
-  <a href="logout.php?logout">ログアウト</a>
-  <form method="post">
-    <div class="form-group">
-      <label for="text">Textarea:</label>
-      <textarea name="message" class="form-control"></textarea>
+<body>
+  <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+    <a href="index.php" class="navbar-brand">KEIJIBAN</a>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="logout.php?logout">ログアウト</a>
+      <a class="nav-item nav-link" href="my_account.php">MYアカウント</a>
     </div>
-    <input class="btn btn-primary" type="submit" value="OK">
-  </form>
-  <?= $out ?>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </nav>
+
+  <div class="w-75 m-auto pt-5">
+    <h1 class="text-center pt-2">掲示板</h1>
+    <form method="post">
+      <div class="form-group">
+        <label for="text">Textarea:</label>
+        <textarea name="message" class="form-control"></textarea>
+      </div>
+      <input class="btn btn-primary" type="submit" value="OK">
+    </form>
+    <?= $out ?>
+  </div>
 </body>
 
 </html>

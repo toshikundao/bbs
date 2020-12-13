@@ -31,20 +31,24 @@ if (!empty($username2) && !empty($email) && !empty($password2)) {
 ?>
 <!DOCTYPE HTML>
 <html lang="ja">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PHPの会員登録機能</title>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <title>会員登録フォーム</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 
 <body>
-  <div class="col-xs-6 col-xs-offset-3">
+  <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">KEIJIBAN</a>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="index.php">ログイン</a>
+    </div>
+  </nav>
 
+  <div class="w-75 m-auto pt-5">
+    <h1 class="text-center pt-2">会員登録フォーム</h1>
     <form method="post">
-      <h1>会員登録フォーム</h1>
       <div class="form-group">
         <input type="text" class="form-control" name="username" placeholder="ユーザー名" required />
       </div>
@@ -54,10 +58,8 @@ if (!empty($username2) && !empty($email) && !empty($password2)) {
       <div class="form-group">
         <input type="password" class="form-control" name="password" placeholder="パスワード" required />
       </div>
-      <button type="submit" class="btn btn-default" name="signup">会員登録する</button>
-      <a href="index.php">ログインはこちら</a>
+      <button type="submit" class="btn btn-primary" name="login">会員登録する</button>
     </form>
-
   </div>
 </body>
 
